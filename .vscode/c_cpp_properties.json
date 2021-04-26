@@ -1,0 +1,23 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/matt/catkin_arm/src/arm_test_pkg/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/matt/catkin_arm/devel/include/**",
+        "/home/matt/catkin_arm/src/Universal_Robots_ROS_Driver/controller_stopper/include/**",
+        "/home/matt/catkin_arm/src/Universal_Robots_ROS_Driver/ur_calibration/include/**",
+        "/home/matt/catkin_arm/src/Universal_Robots_ROS_Driver/ur_controllers/include/**",
+        "/home/matt/catkin_arm/src/fmauch_universal_robot/ur_kinematics/include/**",
+        "/home/matt/catkin_arm/src/Universal_Robots_ROS_Driver/ur_robot_driver/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

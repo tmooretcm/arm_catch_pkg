@@ -15,6 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
   moveit_ros_planning 
   moveit_ros_planning_interface 
   moveit_visual_tools
+  gazebo_msgs
 )
 
 find_package(Eigen)
@@ -142,6 +143,7 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(arm_test_node src/arm_test_node.cpp)
 add_executable(arm_subscriber src/arm_subscriber.cpp)
+add_executable(ball_launch src/ball_launch.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -160,6 +162,8 @@ target_link_libraries(arm_test_node
 )
 
 target_link_libraries(arm_subscriber ${catkin_LIBRARIES})
+
+target_link_libraries(ball_launch ${catkin_LIBRARIES})
 
 
 #############

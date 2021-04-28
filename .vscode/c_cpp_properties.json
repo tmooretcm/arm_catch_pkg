@@ -9,6 +9,7 @@
         "/home/matt/catkin_arm/src/arm_catch_pkg/include/**",
         "/opt/ros/melodic/include/**",
         "/home/matt/catkin_arm/devel/include/**",
+        "/home/matt/catkin_arm/devel/include/arm_catch_pkg/**",
         "/home/matt/catkin_arm/src/Universal_Robots_ROS_Driver/controller_stopper/include/**",
         "/home/matt/catkin_arm/src/Universal_Robots_ROS_Driver/ur_calibration/include/**",
         "/home/matt/catkin_arm/src/Universal_Robots_ROS_Driver/ur_controllers/include/**",

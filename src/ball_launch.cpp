@@ -15,7 +15,7 @@ int main(int argc, char** argv)
 	geometry_msgs::Pose modelPose;
 	modelPose.position.x = 0;
 	modelPose.position.y = 6;
-	modelPose.position.z = 1.8;
+	modelPose.position.z = 0.5;
 	modelPose.orientation.w = 1.0;
 	modelPose.orientation.x = 0.0;
 	modelPose.orientation.y = 0.0;
@@ -36,8 +36,8 @@ int main(int argc, char** argv)
 
 	geometry_msgs::Wrench wrench;
 	wrench.force.x = 0.0;
-	wrench.force.y = -75.0;
-	wrench.force.z = 0.0;
+	wrench.force.y = -30.0;
+	wrench.force.z = 30.0;
 	wrench.torque.x = 0.0;
 	wrench.torque.y = 0.0;
 	wrench.torque.z = 0.0;

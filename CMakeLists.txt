@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  message_generation
   moveit_core 
   moveit_ros_planning 
   moveit_ros_planning_interface 
@@ -60,12 +61,11 @@ find_package(Eigen)
 #   Message2.msg
 # )
 
-## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+# Generate services in the 'srv' folder
+add_service_files(
+  FILES
+  TrajectoryPredict.srv
+)
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -74,11 +74,12 @@ find_package(Eigen)
 #   Action2.action
 # )
 
-## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs
-# )
+# Generate added messages and services with any dependencies listed here
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+  geometry_msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -144,6 +145,7 @@ include_directories(
 add_executable(arm_test_node src/arm_test_node.cpp)
 add_executable(arm_subscriber src/arm_subscriber.cpp)
 add_executable(ball_launch src/ball_launch.cpp)
+add_executable(ball_trajectory_predict src/ball_trajectory_predict.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -160,10 +162,9 @@ target_link_libraries(arm_test_node
   ${catkin_LIBRARIES}
   ${Boost_LIBRARIES}
 )
-
 target_link_libraries(arm_subscriber ${catkin_LIBRARIES})
-
 target_link_libraries(ball_launch ${catkin_LIBRARIES})
+target_link_libraries(ball_trajectory_predict ${catkin_LIBRARIES})
 
 
 #############

@@ -146,6 +146,7 @@ add_executable(arm_test_node src/arm_test_node.cpp)
 add_executable(arm_subscriber src/arm_subscriber.cpp)
 add_executable(ball_launch src/ball_launch.cpp)
 add_executable(ball_trajectory_predict src/ball_trajectory_predict.cpp)
+add_executable(gazebo_trajectory src/gazebo_trajectory.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -165,6 +166,8 @@ target_link_libraries(arm_test_node
 target_link_libraries(arm_subscriber ${catkin_LIBRARIES})
 target_link_libraries(ball_launch ${catkin_LIBRARIES})
 target_link_libraries(ball_trajectory_predict ${catkin_LIBRARIES})
+target_link_libraries(gazebo_trajectory ${catkin_LIBRARIES})
+
 
 
 #############
